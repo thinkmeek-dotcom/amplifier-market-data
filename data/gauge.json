@@ -1,0 +1,143 @@
+{
+  "attribution": "Realtor.com® Economic Research",
+  "attribution_link": "https://www.realtor.com/research/data/",
+  "generated_at": "2026-10-12T17:01:18+00:00",
+  "method": "Estimated from Realtor.com pending listings, days on market and price cuts.",
+  "counties": {
+    "Walton": {
+      "score": 40,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202609",
+      "est_months_supply": 4.4,
+      "pending_ratio": 0.271,
+      "days_on_market": 65.0,
+      "price_cut_share": 0.2703,
+      "parts": {
+        "supply": 68,
+        "days_on_market": 15,
+        "price_cuts": 10
+      }
+    },
+    "Gwinnett": {
+      "score": 36,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202609",
+      "est_months_supply": 4.7,
+      "pending_ratio": 0.2527,
+      "days_on_market": 57.0,
+      "price_cut_share": 0.2705,
+      "parts": {
+        "supply": 61,
+        "days_on_market": 11,
+        "price_cuts": 11
+      }
+    },
+    "Jackson": {
+      "score": 37,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202609",
+      "est_months_supply": 4.9,
+      "pending_ratio": 0.2454,
+      "days_on_market": 72.0,
+      "price_cut_share": 0.197,
+      "parts": {
+        "supply": 58,
+        "days_on_market": 0,
+        "price_cuts": 33
+      }
+    },
+    "Barrow": {
+      "score": 45,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202609",
+      "est_months_supply": 3.7,
+      "pending_ratio": 0.3252,
+      "days_on_market": 65.0,
+      "price_cut_share": 0.2106,
+      "parts": {
+        "supply": 85,
+        "days_on_market": 0,
+        "price_cuts": 11
+      }
+    },
+    "Morgan": {
+      "score": 41,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202609",
+      "est_months_supply": 5.0,
+      "pending_ratio": 0.2422,
+      "days_on_market": 82.0,
+      "price_cut_share": 0.2318,
+      "parts": {
+        "supply": 57,
+        "days_on_market": 50,
+        "price_cuts": 0
+      }
+    },
+    "Clarke": {
+      "score": 41,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202609",
+      "est_months_supply": 5.0,
+      "pending_ratio": 0.2417,
+      "days_on_market": 64.0,
+      "price_cut_share": 0.1819,
+      "parts": {
+        "supply": 56,
+        "days_on_market": 30,
+        "price_cuts": 20
+      }
+    },
+    "Hall": {
+      "score": 43,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202609",
+      "est_months_supply": 4.9,
+      "pending_ratio": 0.2463,
+      "days_on_market": 63.0,
+      "price_cut_share": 0.2361,
+      "parts": {
+        "supply": 58,
+        "days_on_market": 33,
+        "price_cuts": 22
+      }
+    },
+    "Forsyth": {
+      "score": 39,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202609",
+      "est_months_supply": 5.1,
+      "pending_ratio": 0.2356,
+      "days_on_market": 58.0,
+      "price_cut_share": 0.2815,
+      "parts": {
+        "supply": 53,
+        "days_on_market": 28,
+        "price_cuts": 22
+      }
+    },
+    "Oconee": {
+      "score": 66,
+      "zone": "slight_seller",
+      "zone_label": "Slight Seller's Market",
+      "month_raw": "202609",
+      "est_months_supply": 3.6,
+      "pending_ratio": 0.338,
+      "days_on_market": 80.0,
+      "price_cut_share": 0.1357,
+      "parts": {
+        "supply": 88,
+        "days_on_market": 40,
+        "price_cuts": 50
+      }
+    }
+  }
+}
