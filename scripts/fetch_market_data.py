@@ -26,6 +26,15 @@ ZIP_SOURCE_URL = (
     "https://econdata.s3-us-west-2.amazonaws.com/Reports/Core/"
     "RDC_Inventory_Core_Metrics_Zip.csv"
 )
+COUNTY_HISTORY_URL = (
+    "https://econdata.s3-us-west-2.amazonaws.com/Reports/Core/"
+    "RDC_Inventory_Core_Metrics_County_History.csv"
+)
+ZIP_HISTORY_URL = (
+    "https://econdata.s3-us-west-2.amazonaws.com/Reports/Core/"
+    "RDC_Inventory_Core_Metrics_Zip_History.csv"
+)
+HISTORY_YEARS = 5  # yearly points: this year plus the previous 5
 ATTRIBUTION = "Realtor.com® Economic Research"
 ATTRIBUTION_LINK = "https://www.realtor.com/research/data/"
 
@@ -210,6 +219,77 @@ def build_city_snapshot():
     return "\n".join(lines)
 
 
+def stream_rows(url):
+    """Stream a big CSV line by line (history files are 100MB+)."""
+    print(f"Streaming {url}")
+    req = urllib.request.Request(url, headers={"User-Agent": "amplifier-market-data"})
+    resp = urllib.request.urlopen(req, timeout=600)
+    text = io.TextIOWrapper(resp, encoding="utf-8-sig", newline="")
+    yield from csv.DictReader(text)
+
+
+def collect_history(url, key_field, wanted, local_file=None):
+    """Return {key: {yyyymm: (median_list_price, flagged)}} for the wanted keys."""
+    out = {}
+    try:
+        if local_file is not None and local_file.exists():
+            rows = csv.DictReader(open(local_file, encoding="utf-8-sig", newline=""))
+        else:
+            rows = stream_rows(url)
+        for row in rows:
+            key = (row.get(key_field) or "").strip().split(".")[0].zfill(5)
+            if key not in wanted:
+                continue
+            month = (row.get("month_date_yyyymm") or "").strip()
+            if not month.isdigit():
+                continue
+            flag = (row.get("quality_flag") or "").strip()
+            flagged = flag not in ("", "0", "0.0")
+            out.setdefault(key, {})[month] = (num(row.get("median_listing_price")), flagged)
+    except Exception as err:  # noqa: BLE001
+        print(f"WARNING: history unavailable from {url}: {err}")
+        return None
+    return out
+
+
+def yearly_points(series, anchor_month):
+    """Same calendar month each year (removes seasonal swings), skipping flagged months."""
+    year, mm = int(anchor_month[:4]), anchor_month[4:]
+    points = []
+    for y in range(year - HISTORY_YEARS, year + 1):
+        value, flagged = series.get(f"{y}{mm}", (None, True))
+        if value is None or flagged:
+            continue
+        points.append({"year": y, "value": value})
+    return points
+
+
+def build_history(county_month):
+    """Writes data/history.json. Never breaks the rest of the update."""
+    counties = collect_history(
+        COUNTY_HISTORY_URL, "county_fips", set(COUNTIES),
+        ROOT / "data" / "source" / "RDC_Inventory_Core_Metrics_County_History.csv")
+    if not counties:
+        print("WARNING: no county history; keeping previous history file.")
+        return
+    zip_set = {z for zips in CITY_ZIPS.values() for z in zips}
+    zips = collect_history(
+        ZIP_HISTORY_URL, "postal_code", zip_set,
+        ROOT / "data" / "source" / "RDC_Inventory_Core_Metrics_Zip_History.csv") or {}
+    history = {
+        "attribution": ATTRIBUTION,
+        "attribution_link": ATTRIBUTION_LINK,
+        "metric": "median_list_price",
+        "anchor_month": county_month,
+        "anchor_month_name": datetime.strptime(county_month, "%Y%m").strftime("%B"),
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "counties": {COUNTIES[f]: yearly_points(s, county_month) for f, s in counties.items()},
+        "zips": {z: yearly_points(s, county_month) for z, s in zips.items()},
+    }
+    (OUT_DIR / "history.json").write_text(json.dumps(history, indent=2, ensure_ascii=False))
+    print(f"History saved: {len(history['counties'])} counties, {len(history['zips'])} ZIPs")
+
+
 def main():
     text, how = load_csv_text()
     best = latest_by_county(text)
@@ -257,6 +337,7 @@ def main():
     if len(months) > 1:
         lines += [f"**Heads up:** counties came from different months: {', '.join(month_label(m) for m in months)}", ""]
     lines += ["⚠️ = Realtor.com flagged this county's data for a quality issue that month.", ""]
+    build_history(newest)
     city_summary = build_city_snapshot()
     if city_summary:
         lines += ["", city_summary]
