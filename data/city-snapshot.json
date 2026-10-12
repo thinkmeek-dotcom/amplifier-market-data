@@ -3,7 +3,7 @@
   "attribution_link": "https://www.realtor.com/research/data/",
   "month": "202609",
   "month_label": "September 2026",
-  "generated_at": "2026-10-12T12:19:38+00:00",
+  "generated_at": "2026-10-12T16:57:32+00:00",
   "fetched_via": "download",
   "cities": {
     "Winder": [
@@ -18,6 +18,10 @@
         "active_listings_yoy": 0.149,
         "price_reduced_share": 0.2557,
         "price_reduced_share_yoy": 0.0407,
+        "pending_ratio": 0.3241,
+        "pending_ratio_yoy": -0.0502,
+        "pending_listings": 100.0,
+        "new_listings": 94.0,
         "quality_flag": "0"
       }
     ],
@@ -33,6 +37,10 @@
         "active_listings_yoy": 0.4786,
         "price_reduced_share": 0.2879,
         "price_reduced_share_yoy": 0.1268,
+        "pending_ratio": 0.3699,
+        "pending_ratio_yoy": -0.0318,
+        "pending_listings": 32.0,
+        "new_listings": 16.0,
         "quality_flag": "0"
       }
     ],
@@ -48,6 +56,10 @@
         "active_listings_yoy": 0.3562,
         "price_reduced_share": 0.1423,
         "price_reduced_share_yoy": -0.0057,
+        "pending_ratio": 0.2761,
+        "pending_ratio_yoy": -0.0116,
+        "pending_listings": 41.0,
+        "new_listings": 36.0,
         "quality_flag": "0"
       }
     ],
@@ -63,6 +75,10 @@
         "active_listings_yoy": 0.098,
         "price_reduced_share": 0.1677,
         "price_reduced_share_yoy": -0.0781,
+        "pending_ratio": 0.2923,
+        "pending_ratio_yoy": -0.0692,
+        "pending_listings": 48.0,
+        "new_listings": 50.0,
         "quality_flag": "0"
       }
     ],
@@ -78,6 +94,10 @@
         "active_listings_yoy": 0.3253,
         "price_reduced_share": 0.2949,
         "price_reduced_share_yoy": 0.0498,
+        "pending_ratio": 0.2152,
+        "pending_ratio_yoy": -0.2025,
+        "pending_listings": 36.0,
+        "new_listings": 46.0,
         "quality_flag": "0"
       }
     ],
@@ -93,6 +113,10 @@
         "active_listings_yoy": 0.1038,
         "price_reduced_share": 0.1577,
         "price_reduced_share_yoy": -0.0453,
+        "pending_ratio": 0.2342,
+        "pending_ratio_yoy": 0.0229,
+        "pending_listings": 69.0,
+        "new_listings": 74.0,
         "quality_flag": "0"
       }
     ],
@@ -108,6 +132,10 @@
         "active_listings_yoy": 0.3109,
         "price_reduced_share": 0.1717,
         "price_reduced_share_yoy": -0.0041,
+        "pending_ratio": 0.2251,
+        "pending_ratio_yoy": -0.1254,
+        "pending_listings": 75.0,
+        "new_listings": 92.0,
         "quality_flag": "0"
       }
     ],
@@ -123,6 +151,10 @@
         "active_listings_yoy": 0.0586,
         "price_reduced_share": 0.2829,
         "price_reduced_share_yoy": 0.0593,
+        "pending_ratio": 0.2799,
+        "pending_ratio_yoy": -0.0442,
+        "pending_listings": 48.0,
+        "new_listings": 40.0,
         "quality_flag": "0"
       },
       {
@@ -136,6 +168,10 @@
         "active_listings_yoy": 0.5412,
         "price_reduced_share": 0.3898,
         "price_reduced_share_yoy": 0.1052,
+        "pending_ratio": 0.2061,
+        "pending_ratio_yoy": -0.141,
+        "pending_listings": 27.0,
+        "new_listings": 20.0,
         "quality_flag": "0"
       }
     ],
@@ -151,6 +187,10 @@
         "active_listings_yoy": 0.0187,
         "price_reduced_share": 0.1472,
         "price_reduced_share_yoy": 0.0328,
+        "pending_ratio": 0.4083,
+        "pending_ratio_yoy": -0.003,
+        "pending_listings": 45.0,
+        "new_listings": 26.0,
         "quality_flag": "0"
       }
     ],
@@ -166,6 +206,10 @@
         "active_listings_yoy": 0.9588,
         "price_reduced_share": 0.1504,
         "price_reduced_share_yoy": -0.0688,
+        "pending_ratio": 0.2632,
+        "pending_ratio_yoy": -0.077,
+        "pending_listings": 25.0,
+        "new_listings": 26.0,
         "quality_flag": "0"
       },
       {
@@ -179,6 +223,10 @@
         "active_listings_yoy": 0.5638,
         "price_reduced_share": 0.1737,
         "price_reduced_share_yoy": 0.0298,
+        "pending_ratio": 0.2447,
+        "pending_ratio_yoy": -0.1339,
+        "pending_listings": 47.0,
+        "new_listings": 60.0,
         "quality_flag": "1"
       },
       {
@@ -192,6 +240,10 @@
         "active_listings_yoy": 0.2612,
         "price_reduced_share": 0.1664,
         "price_reduced_share_yoy": -0.0705,
+        "pending_ratio": 0.2268,
+        "pending_ratio_yoy": -0.0966,
+        "pending_listings": 58.0,
+        "new_listings": 56.0,
         "quality_flag": "0"
       },
       {
@@ -205,6 +257,10 @@
         "active_listings_yoy": 0.1111,
         "price_reduced_share": 0.209,
         "price_reduced_share_yoy": 0.0213,
+        "pending_ratio": 0.26,
+        "pending_ratio_yoy": 0.0711,
+        "pending_listings": 13.0,
+        "new_listings": 4.0,
         "quality_flag": "1"
       }
     ]
