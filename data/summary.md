@@ -1,6 +1,6 @@
 # Amplifier market snapshot
 
-**September 2026** · Source: [Realtor.com® Economic Research](https://www.realtor.com/research/data/) · fetched via download · generated 2026-10-12T06:09:12+00:00
+**September 2026** · Source: [Realtor.com® Economic Research](https://www.realtor.com/research/data/) · fetched via download · generated 2026-10-12T06:11:55+00:00
 
 | County | Median list price | Days on market | Active listings | % with a price cut | Data month |
 |---|---|---|---|---|---|
