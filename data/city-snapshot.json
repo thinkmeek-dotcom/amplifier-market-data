@@ -1,0 +1,212 @@
+{
+  "attribution": "Realtor.com® Economic Research",
+  "attribution_link": "https://www.realtor.com/research/data/",
+  "month": "202609",
+  "month_label": "September 2026",
+  "generated_at": "2026-10-12T06:33:54+00:00",
+  "fetched_via": "download",
+  "cities": {
+    "Winder": [
+      {
+        "zip": "30680",
+        "month": "202609",
+        "median_list_price": 369900.0,
+        "median_list_price_yoy": -0.0605,
+        "median_days_on_market": 61.0,
+        "median_days_on_market_yoy": 0.0166,
+        "active_listings": 309.0,
+        "active_listings_yoy": 0.149,
+        "price_reduced_share": 0.2557,
+        "price_reduced_share_yoy": 0.0407,
+        "quality_flag": "0"
+      }
+    ],
+    "Bethlehem": [
+      {
+        "zip": "30620",
+        "month": "202609",
+        "median_list_price": 385000.0,
+        "median_list_price_yoy": -0.038,
+        "median_days_on_market": 81.0,
+        "median_days_on_market_yoy": 0.5189,
+        "active_listings": 87.0,
+        "active_listings_yoy": 0.4786,
+        "price_reduced_share": 0.2879,
+        "price_reduced_share_yoy": 0.1268,
+        "quality_flag": "0"
+      }
+    ],
+    "Statham": [
+      {
+        "zip": "30666",
+        "month": "202609",
+        "median_list_price": 479500.0,
+        "median_list_price_yoy": 0.0994,
+        "median_days_on_market": 70.0,
+        "median_days_on_market_yoy": -0.1587,
+        "active_listings": 149.0,
+        "active_listings_yoy": 0.3562,
+        "price_reduced_share": 0.1423,
+        "price_reduced_share_yoy": -0.0057,
+        "quality_flag": "0"
+      }
+    ],
+    "Auburn": [
+      {
+        "zip": "30011",
+        "month": "202609",
+        "median_list_price": 432200.0,
+        "median_list_price_yoy": 0.0018,
+        "median_days_on_market": 59.0,
+        "median_days_on_market_yoy": 0.2251,
+        "active_listings": 163.0,
+        "active_listings_yoy": 0.098,
+        "price_reduced_share": 0.1677,
+        "price_reduced_share_yoy": -0.0781,
+        "quality_flag": "0"
+      }
+    ],
+    "Braselton": [
+      {
+        "zip": "30517",
+        "month": "202609",
+        "median_list_price": 465950.0,
+        "median_list_price_yoy": -0.0651,
+        "median_days_on_market": 63.0,
+        "median_days_on_market_yoy": 0.2792,
+        "active_listings": 165.0,
+        "active_listings_yoy": 0.3253,
+        "price_reduced_share": 0.2949,
+        "price_reduced_share_yoy": 0.0498,
+        "quality_flag": "0"
+      }
+    ],
+    "Jefferson": [
+      {
+        "zip": "30549",
+        "month": "202609",
+        "median_list_price": 487940.0,
+        "median_list_price_yoy": -0.0091,
+        "median_days_on_market": 73.0,
+        "median_days_on_market_yoy": 0.0985,
+        "active_listings": 293.0,
+        "active_listings_yoy": 0.1038,
+        "price_reduced_share": 0.1577,
+        "price_reduced_share_yoy": -0.0453,
+        "quality_flag": "0"
+      }
+    ],
+    "Hoschton": [
+      {
+        "zip": "30548",
+        "month": "202609",
+        "median_list_price": 549475.0,
+        "median_list_price_yoy": -0.0142,
+        "median_days_on_market": 63.0,
+        "median_days_on_market_yoy": 0.0121,
+        "active_listings": 331.0,
+        "active_listings_yoy": 0.3109,
+        "price_reduced_share": 0.1717,
+        "price_reduced_share_yoy": -0.0041,
+        "quality_flag": "0"
+      }
+    ],
+    "Monroe": [
+      {
+        "zip": "30655",
+        "month": "202609",
+        "median_list_price": 387225.0,
+        "median_list_price_yoy": -0.028,
+        "median_days_on_market": 74.0,
+        "median_days_on_market_yoy": 0.1563,
+        "active_listings": 172.0,
+        "active_listings_yoy": 0.0586,
+        "price_reduced_share": 0.2829,
+        "price_reduced_share_yoy": 0.0593,
+        "quality_flag": "0"
+      },
+      {
+        "zip": "30656",
+        "month": "202609",
+        "median_list_price": 573750.0,
+        "median_list_price_yoy": 0.0124,
+        "median_days_on_market": 67.0,
+        "median_days_on_market_yoy": 0.0813,
+        "active_listings": 131.0,
+        "active_listings_yoy": 0.5412,
+        "price_reduced_share": 0.3898,
+        "price_reduced_share_yoy": 0.1052,
+        "quality_flag": "0"
+      }
+    ],
+    "Watkinsville": [
+      {
+        "zip": "30677",
+        "month": "202609",
+        "median_list_price": 632050.0,
+        "median_list_price_yoy": -0.021,
+        "median_days_on_market": 71.0,
+        "median_days_on_market_yoy": -0.2879,
+        "active_listings": 109.0,
+        "active_listings_yoy": 0.0187,
+        "price_reduced_share": 0.1472,
+        "price_reduced_share_yoy": 0.0328,
+        "quality_flag": "0"
+      }
+    ],
+    "Athens": [
+      {
+        "zip": "30601",
+        "month": "202609",
+        "median_list_price": 391688.0,
+        "median_list_price_yoy": 0.2052,
+        "median_days_on_market": 47.0,
+        "median_days_on_market_yoy": 0.0568,
+        "active_listings": 95.0,
+        "active_listings_yoy": 0.9588,
+        "price_reduced_share": 0.1504,
+        "price_reduced_share_yoy": -0.0688,
+        "quality_flag": "0"
+      },
+      {
+        "zip": "30605",
+        "month": "202609",
+        "median_list_price": 334750.0,
+        "median_list_price_yoy": -0.0433,
+        "median_days_on_market": 69.0,
+        "median_days_on_market_yoy": 0.0573,
+        "active_listings": 190.0,
+        "active_listings_yoy": 0.5638,
+        "price_reduced_share": 0.1737,
+        "price_reduced_share_yoy": 0.0298,
+        "quality_flag": "1"
+      },
+      {
+        "zip": "30606",
+        "month": "202609",
+        "median_list_price": 464000.0,
+        "median_list_price_yoy": 0.0704,
+        "median_days_on_market": 65.0,
+        "median_days_on_market_yoy": -0.3112,
+        "active_listings": 254.0,
+        "active_listings_yoy": 0.2612,
+        "price_reduced_share": 0.1664,
+        "price_reduced_share_yoy": -0.0705,
+        "quality_flag": "0"
+      },
+      {
+        "zip": "30607",
+        "month": "202609",
+        "median_list_price": 488425.0,
+        "median_list_price_yoy": -0.143,
+        "median_days_on_market": 78.0,
+        "median_days_on_market_yoy": -0.2654,
+        "active_listings": 50.0,
+        "active_listings_yoy": 0.1111,
+        "price_reduced_share": 0.209,
+        "price_reduced_share_yoy": 0.0213,
+        "quality_flag": "1"
+      }
+    ]
+  }
+}
