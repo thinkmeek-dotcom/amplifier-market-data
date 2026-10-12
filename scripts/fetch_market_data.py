@@ -330,6 +330,71 @@ def build_signal_history(counties):
     }
     (OUT_DIR / "signal-history.json").write_text(json.dumps(out, ensure_ascii=False))
     print(f"Signal history saved: {sum(len(v) for v in signals.values())} county-months")
+    build_gauge(signals)
+
+
+# ---- Buyer/seller market gauge -------------------------------------------
+# Score 0-100 (0 = strong buyer's market, 100 = strong seller's market).
+#   50% estimated months of supply (pending listings stand in for monthly
+#       sales; 3 months or less = 100, 7.5 months or more = 0, ~5.25 = 50)
+#   25% days on market vs. the same calendar month in past years
+#   25% share of listings with a price cut vs. the same month in past years
+MOS_FACTOR = 1.2
+GAUGE_ZONES = [
+    (20, "strong_buyer", "Strong Buyer's Market"),
+    (40, "slight_buyer", "Slight Buyer's Market"),
+    (60, "balanced", "Balanced Market"),
+    (80, "slight_seller", "Slight Seller's Market"),
+    (100, "strong_seller", "Strong Seller's Market"),
+]
+
+
+def _percentile(value, past, higher_is_seller):
+    if not past:
+        return 50.0
+    below = sum(v < value for v in past) + 0.5 * sum(v == value for v in past)
+    pct = 100.0 * below / len(past)
+    return pct if higher_is_seller else 100.0 - pct
+
+
+def build_gauge(signals):
+    out_counties = {}
+    for county, rows in signals.items():
+        good = [r for r in rows
+                if None not in (r["pending_ratio"], r["dom"], r["price_cut_share"])
+                and r["pending_ratio"] > 0]
+        if len(good) < 13:
+            continue
+        cur = good[-1]
+        same_month = [r for r in good[:-1] if r["month"][4:] == cur["month"][4:]]
+        mos = MOS_FACTOR / cur["pending_ratio"]
+        supply_score = max(0.0, min(100.0, (7.5 - mos) / (7.5 - 3.0) * 100))
+        dom_score = _percentile(cur["dom"], [r["dom"] for r in same_month], False)
+        cut_score = _percentile(cur["price_cut_share"],
+                                [r["price_cut_share"] for r in same_month], False)
+        score = round(0.5 * supply_score + 0.25 * dom_score + 0.25 * cut_score)
+        zone_key, zone_label = next((k, l) for top, k, l in GAUGE_ZONES if score <= top)
+        out_counties[county] = {
+            "score": score,
+            "zone": zone_key,
+            "zone_label": zone_label,
+            "month_raw": cur["month"],
+            "est_months_supply": round(mos, 1),
+            "pending_ratio": cur["pending_ratio"],
+            "days_on_market": cur["dom"],
+            "price_cut_share": cur["price_cut_share"],
+            "parts": {"supply": round(supply_score), "days_on_market": round(dom_score),
+                      "price_cuts": round(cut_score)},
+        }
+    out = {
+        "attribution": ATTRIBUTION,
+        "attribution_link": ATTRIBUTION_LINK,
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "method": "Estimated from Realtor.com pending listings, days on market and price cuts.",
+        "counties": out_counties,
+    }
+    (OUT_DIR / "gauge.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
+    print("Gauge saved: " + ", ".join(f"{c} {v['score']}" for c, v in out_counties.items()))
 
 
 def main():
