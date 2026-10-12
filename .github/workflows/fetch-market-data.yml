@@ -1,30 +1,34 @@
-   name: Fetch market data
+name: Fetch market data
 
-   # Manual runs only for now. We add the monthly schedule after the website is wired up.
-   on:
-     workflow_dispatch:
+on:
+  # Autopilot: checks every Monday at ~8am Eastern.
+  # Only saves a change when Realtor.com publishes a new month.
+  schedule:
+    - cron: "0 12 * * 1"
+  # Manual "Run workflow" button still works anytime.
+  workflow_dispatch:
 
-   permissions:
-     contents: write
+permissions:
+  contents: write
 
-   jobs:
-     fetch:
-       runs-on: ubuntu-latest
-       timeout-minutes: 20
-       steps:
-         - uses: actions/checkout@v5
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
 
-         - uses: actions/setup-python@v6
-           with:
-             python-version: "3.12"
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
 
-         - name: Download and filter Realtor.com county data
-           run: python scripts/fetch_market_data.py
+      - name: Download and filter Realtor.com county data
+        run: python scripts/fetch_market_data.py
 
-         - name: Save results to the repo
-           run: |
-             git config user.name "github-actions[bot]"
-             git config user.email "github-actions[bot]@users.noreply.github.com"
-             git add data/
-             git diff --cached --quiet || git commit -m "Update market snapshot"
-             git push
+      - name: Save results to the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Update market snapshot"
+          git push
