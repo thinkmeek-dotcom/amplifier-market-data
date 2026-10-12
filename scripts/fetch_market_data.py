@@ -122,6 +122,10 @@ def latest_by_county(text):
             "active_listings_yoy": num(row.get("active_listing_count_yy")),
             "price_reduced_share": num(row.get("price_reduced_share")),
             "price_reduced_share_yoy": num(row.get("price_reduced_share_yy")),
+            "pending_ratio": num(row.get("pending_ratio")),
+            "pending_ratio_yoy": num(row.get("pending_ratio_yy")),
+            "pending_listings": num(row.get("pending_listing_count")),
+            "new_listings": num(row.get("new_listing_count")),
             "quality_flag": (row.get("quality_flag") or "").strip(),
         }
     return best
@@ -142,6 +146,10 @@ def whole(v):
     return "—" if v is None else f"{v:,.0f}"
 
 
+def ratio(v):
+    return "—" if v is None else f"{v:.2f}"
+
+
 def pct(v):
     return "—" if v is None else f"{v * 100:.0f}%"
 
@@ -156,6 +164,10 @@ def stats_from_row(row):
         "active_listings_yoy": num(row.get("active_listing_count_yy")),
         "price_reduced_share": num(row.get("price_reduced_share")),
         "price_reduced_share_yoy": num(row.get("price_reduced_share_yy")),
+        "pending_ratio": num(row.get("pending_ratio")),
+        "pending_ratio_yoy": num(row.get("pending_ratio_yy")),
+        "pending_listings": num(row.get("pending_listing_count")),
+        "new_listings": num(row.get("new_listing_count")),
         "quality_flag": (row.get("quality_flag") or "").strip(),
     }
 
@@ -229,7 +241,7 @@ def stream_rows(url):
 
 
 def collect_history(url, key_field, wanted, local_file=None):
-    """Return {key: {yyyymm: (median_list_price, flagged)}} for the wanted keys."""
+    """Return {key: {yyyymm: {price, pending_ratio, dom, price_cut_share, flagged}}}."""
     out = {}
     try:
         if local_file is not None and local_file.exists():
@@ -245,7 +257,13 @@ def collect_history(url, key_field, wanted, local_file=None):
                 continue
             flag = (row.get("quality_flag") or "").strip()
             flagged = flag not in ("", "0", "0.0")
-            out.setdefault(key, {})[month] = (num(row.get("median_listing_price")), flagged)
+            out.setdefault(key, {})[month] = {
+                "price": num(row.get("median_listing_price")),
+                "pending_ratio": num(row.get("pending_ratio")),
+                "dom": num(row.get("median_days_on_market")),
+                "price_cut_share": num(row.get("price_reduced_share")),
+                "flagged": flagged,
+            }
     except Exception as err:  # noqa: BLE001
         print(f"WARNING: history unavailable from {url}: {err}")
         return None
@@ -257,7 +275,8 @@ def yearly_points(series, anchor_month):
     year, mm = int(anchor_month[:4]), anchor_month[4:]
     points = []
     for y in range(year - HISTORY_YEARS, year + 1):
-        value, flagged = series.get(f"{y}{mm}", (None, True))
+        point = series.get(f"{y}{mm}") or {"price": None, "flagged": True}
+        value, flagged = point["price"], point["flagged"]
         if value is None or flagged:
             continue
         points.append({"year": y, "value": value})
@@ -288,6 +307,29 @@ def build_history(county_month):
     }
     (OUT_DIR / "history.json").write_text(json.dumps(history, indent=2, ensure_ascii=False))
     print(f"History saved: {len(history['counties'])} counties, {len(history['zips'])} ZIPs")
+    build_signal_history(counties)
+
+
+def build_signal_history(counties):
+    """Monthly market-gauge signals per county (unflagged months only)."""
+    signals = {}
+    for fips, series in counties.items():
+        rows = []
+        for month in sorted(series):
+            p = series[month]
+            if p["flagged"]:
+                continue
+            rows.append({"month": month, "pending_ratio": p["pending_ratio"],
+                         "dom": p["dom"], "price_cut_share": p["price_cut_share"]})
+        signals[COUNTIES[fips]] = rows
+    out = {
+        "attribution": ATTRIBUTION,
+        "attribution_link": ATTRIBUTION_LINK,
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "counties": signals,
+    }
+    (OUT_DIR / "signal-history.json").write_text(json.dumps(out, ensure_ascii=False))
+    print(f"Signal history saved: {sum(len(v) for v in signals.values())} county-months")
 
 
 def main():
@@ -322,14 +364,15 @@ def main():
         "",
         f"**{month_label(newest)}** · Source: [{ATTRIBUTION}]({ATTRIBUTION_LINK}) · fetched via {how} · generated {snapshot['generated_at']}",
         "",
-        "| County | Median list price | Days on market | Active listings | % with a price cut | Data month |",
-        "|---|---|---|---|---|---|",
+        "| County | Median list price | Days on market | Active listings | % with a price cut | Pending ratio | Data month |",
+        "|---|---|---|---|---|---|---|",
     ]
     for r in ordered:
         flag = " ⚠️" if r["quality_flag"] not in ("", "0", "0.0") else ""
         lines.append(
             f"| {r['county']}{flag} | {money(r['median_list_price'])} | {whole(r['median_days_on_market'])} | "
-            f"{whole(r['active_listings'])} | {pct(r['price_reduced_share'])} | {month_label(r['month_raw'])} |"
+            f"{whole(r['active_listings'])} | {pct(r['price_reduced_share'])} | {ratio(r['pending_ratio'])} | "
+            f"{month_label(r['month_raw'])} |"
         )
     lines.append("")
     if missing:
