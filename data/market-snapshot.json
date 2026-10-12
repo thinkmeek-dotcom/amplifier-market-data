@@ -1,87 +1,127 @@
 {
-  "source": "Redfin Data Center (county market tracker)",
-  "source_url": "https://redfin-public-data.s3.us-west-2.amazonaws.com/redfin_market_tracker/county_market_tracker.tsv000.gz",
-  "generated_at": "2026-10-12T05:55:58+00:00",
-  "period_durations_found": [
-    "30"
-  ],
-  "counties": [
-    {
-      "county": "Barrow",
-      "period_duration": "30",
-      "period_begin": "2026-05-01",
-      "period_end": "2026-05-31",
-      "median_list_price": 393115.0,
-      "median_sale_price": 359900.0,
-      "avg_sale_to_list": 0.9869009329,
-      "median_dom": 41.0,
-      "homes_sold": 151.0
+  "attribution": "Realtor.com® Economic Research",
+  "attribution_link": "https://www.realtor.com/research/data/",
+  "month": "202609",
+  "month_label": "September 2026",
+  "generated_at": "2026-10-12T06:09:12+00:00",
+  "fetched_via": "download",
+  "counties": {
+    "Barrow": {
+      "fips": "13013",
+      "median_list_price": 389900.0,
+      "median_list_price_yoy": -0.0252,
+      "median_days_on_market": 65.0,
+      "median_days_on_market_yoy": 0.0924,
+      "active_listings": 635.0,
+      "active_listings_yoy": 0.2451,
+      "price_reduced_share": 0.2106,
+      "price_reduced_share_yoy": -0.0072,
+      "quality_flag": "0",
+      "month": "202609"
     },
-    {
-      "county": "Jackson",
-      "period_duration": "30",
-      "period_begin": "2026-05-01",
-      "period_end": "2026-05-31",
-      "median_list_price": 439900.0,
-      "median_sale_price": 423245.0,
-      "avg_sale_to_list": 0.9887739498,
-      "median_dom": 63.0,
-      "homes_sold": 164.0
+    "Jackson": {
+      "fips": "13157",
+      "median_list_price": 461485.0,
+      "median_list_price_yoy": -0.0283,
+      "median_days_on_market": 72.0,
+      "median_days_on_market_yoy": 0.1429,
+      "active_listings": 809.0,
+      "active_listings_yoy": 0.2543,
+      "price_reduced_share": 0.197,
+      "price_reduced_share_yoy": -0.0063,
+      "quality_flag": "0",
+      "month": "202609"
     },
-    {
-      "county": "Gwinnett",
-      "period_duration": "30",
-      "period_begin": "2026-05-01",
-      "period_end": "2026-05-31",
-      "median_list_price": 450000.0,
-      "median_sale_price": 420000.0,
-      "avg_sale_to_list": 0.983780367,
-      "median_dom": 37.0,
-      "homes_sold": 932.0
+    "Gwinnett": {
+      "fips": "13135",
+      "median_list_price": 449945.0,
+      "median_list_price_yoy": -0.0023,
+      "median_days_on_market": 57.0,
+      "median_days_on_market_yoy": 0.0088,
+      "active_listings": 3833.0,
+      "active_listings_yoy": 0.143,
+      "price_reduced_share": 0.2705,
+      "price_reduced_share_yoy": 0.0171,
+      "quality_flag": "0",
+      "month": "202609"
     },
-    {
-      "county": "Hall",
-      "period_duration": "30",
-      "period_begin": "2026-05-01",
-      "period_end": "2026-05-31",
-      "median_list_price": 424900.0,
-      "median_sale_price": 420000.0,
-      "avg_sale_to_list": 0.9742158777,
-      "median_dom": 49.0,
-      "homes_sold": 265.0
+    "Hall": {
+      "fips": "13139",
+      "median_list_price": 489900.0,
+      "median_list_price_yoy": 0.0235,
+      "median_days_on_market": 63.0,
+      "median_days_on_market_yoy": 0.0417,
+      "active_listings": 1176.0,
+      "active_listings_yoy": 0.1074,
+      "price_reduced_share": 0.2361,
+      "price_reduced_share_yoy": -0.0185,
+      "quality_flag": "0",
+      "month": "202609"
     },
-    {
-      "county": "Walton",
-      "period_duration": "30",
-      "period_begin": "2026-05-01",
-      "period_end": "2026-05-31",
-      "median_list_price": 417500.0,
-      "median_sale_price": 375500.0,
-      "avg_sale_to_list": 0.979047038,
-      "median_dom": 48.0,
-      "homes_sold": 126.0
+    "Oconee": {
+      "fips": "13219",
+      "median_list_price": 698364.0,
+      "median_list_price_yoy": 0.0085,
+      "median_days_on_market": 80.0,
+      "median_days_on_market_yoy": -0.1675,
+      "active_listings": 249.0,
+      "active_listings_yoy": 0.1347,
+      "price_reduced_share": 0.1357,
+      "price_reduced_share_yoy": -0.0085,
+      "quality_flag": "0",
+      "month": "202609"
     },
-    {
-      "county": "Morgan",
-      "period_duration": "30",
-      "period_begin": "2026-05-01",
-      "period_end": "2026-05-31",
-      "median_list_price": 432400.0,
-      "median_sale_price": 367145.0,
-      "avg_sale_to_list": 0.9838247814,
-      "median_dom": 65.0,
-      "homes_sold": 31.0
+    "Clarke": {
+      "fips": "13059",
+      "median_list_price": 386250.0,
+      "median_list_price_yoy": 0.0168,
+      "median_days_on_market": 64.0,
+      "median_days_on_market_yoy": -0.1911,
+      "active_listings": 590.0,
+      "active_listings_yoy": 0.4466,
+      "price_reduced_share": 0.1819,
+      "price_reduced_share_yoy": 0.0004,
+      "quality_flag": "0",
+      "month": "202609"
     },
-    {
-      "county": "Forsyth",
-      "period_duration": "30",
-      "period_begin": "2026-05-01",
-      "period_end": "2026-05-31",
-      "median_list_price": 650000.0,
-      "median_sale_price": 642500.0,
-      "avg_sale_to_list": 0.9777305904,
-      "median_dom": 38.0,
-      "homes_sold": 316.0
+    "Walton": {
+      "fips": "13297",
+      "median_list_price": 479975.0,
+      "median_list_price_yoy": -0.0194,
+      "median_days_on_market": 65.0,
+      "median_days_on_market_yoy": 0.0039,
+      "active_listings": 637.0,
+      "active_listings_yoy": 0.0974,
+      "price_reduced_share": 0.2703,
+      "price_reduced_share_yoy": 0.0041,
+      "quality_flag": "0",
+      "month": "202609"
+    },
+    "Morgan": {
+      "fips": "13211",
+      "median_list_price": 585000.0,
+      "median_list_price_yoy": -0.0972,
+      "median_days_on_market": 82.0,
+      "median_days_on_market_yoy": -0.0739,
+      "active_listings": 128.0,
+      "active_listings_yoy": -0.0078,
+      "price_reduced_share": 0.2318,
+      "price_reduced_share_yoy": 0.0501,
+      "quality_flag": "0",
+      "month": "202609"
+    },
+    "Forsyth": {
+      "fips": "13117",
+      "median_list_price": 665950.0,
+      "median_list_price_yoy": -0.0097,
+      "median_days_on_market": 58.0,
+      "median_days_on_market_yoy": 0.0311,
+      "active_listings": 1342.0,
+      "active_listings_yoy": 0.0876,
+      "price_reduced_share": 0.2815,
+      "price_reduced_share_yoy": -0.0142,
+      "quality_flag": "0",
+      "month": "202609"
     }
-  ]
+  }
 }

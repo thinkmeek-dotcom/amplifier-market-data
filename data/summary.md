@@ -1,22 +1,17 @@
 # Amplifier market snapshot
 
-Generated 2026-10-12T05:55:58+00:00 from Redfin.
+**September 2026** · Source: [Realtor.com® Economic Research](https://www.realtor.com/research/data/) · fetched via download · generated 2026-10-12T06:09:12+00:00
 
-## Period length: 30
+| County | Median list price | Days on market | Active listings | % with a price cut | Data month |
+|---|---|---|---|---|---|
+| Barrow | $389,900 | 65 | 635 | 21% | September 2026 |
+| Jackson | $461,485 | 72 | 809 | 20% | September 2026 |
+| Gwinnett | $449,945 | 57 | 3,833 | 27% | September 2026 |
+| Hall | $489,900 | 63 | 1,176 | 24% | September 2026 |
+| Oconee | $698,364 | 80 | 249 | 14% | September 2026 |
+| Clarke | $386,250 | 64 | 590 | 18% | September 2026 |
+| Walton | $479,975 | 65 | 637 | 27% | September 2026 |
+| Morgan | $585,000 | 82 | 128 | 23% | September 2026 |
+| Forsyth | $665,950 | 58 | 1,342 | 28% | September 2026 |
 
-| County | Period | List price | Sold price | Sale-to-list | Days on market | Homes sold |
-|---|---|---|---|---|---|---|
-| Barrow | 2026-05-01 to 2026-05-31 | $393,115 | $359,900 | 98.7% | 41 | 151 |
-| Jackson | 2026-05-01 to 2026-05-31 | $439,900 | $423,245 | 98.9% | 63 | 164 |
-| Gwinnett | 2026-05-01 to 2026-05-31 | $450,000 | $420,000 | 98.4% | 37 | 932 |
-| Hall | 2026-05-01 to 2026-05-31 | $424,900 | $420,000 | 97.4% | 49 | 265 |
-| Walton | 2026-05-01 to 2026-05-31 | $417,500 | $375,500 | 97.9% | 48 | 126 |
-| Morgan | 2026-05-01 to 2026-05-31 | $432,400 | $367,145 | 98.4% | 65 | 31 |
-| Forsyth | 2026-05-01 to 2026-05-31 | $650,000 | $642,500 | 97.8% | 38 | 316 |
-
-**Not found in Redfin data:** Oconee, Clarke
-
-## Diagnostics
-
-- Newest period anywhere in Redfin's file: 2026-05-31
-- GA regions with 'Oconee' or 'Clarke' in the name: none
+⚠️ = Realtor.com flagged this county's data for a quality issue that month.
