@@ -26,6 +26,8 @@ OUT_DIR = Path(__file__).resolve().parent.parent / "data"
 
 csv.field_size_limit(10**7)
 
+DEBUG = {"latest_period_in_file": "", "ga_regions_named_like_missing": set()}
+
 
 def clean(value):
     return (value or "").strip().strip('"').strip()
@@ -42,10 +44,14 @@ def to_number(value):
 
 
 def county_from_region(region):
-    # Redfin writes regions like "Barrow County, GA"
-    region = clean(region)
+    # Redfin writes regions like "Barrow County, GA". Some consolidated
+    # governments use longer names (e.g. "Athens-Clarke County, GA").
+    region = clean(region).lower()
+    if not region.endswith(", ga"):
+        return None
     for name in COUNTIES:
-        if region.lower() == f"{name} county, ga".lower():
+        n = name.lower()
+        if region == f"{n} county, ga" or region.endswith(f"-{n} county, ga"):
             return name
     return None
 
@@ -65,7 +71,16 @@ def latest_by_county(rows):
     county (and per period length, in case Redfin publishes more than one)."""
     best = {}
     durations_seen = set()
+    DEBUG["latest_period_in_file"] = ""
     for row in rows:
+        period_end_any = clean(row.get("period_end"))
+        if period_end_any > DEBUG["latest_period_in_file"]:
+            DEBUG["latest_period_in_file"] = period_end_any
+        region_raw = clean(row.get("region"))
+        if region_raw.lower().endswith(", ga") and any(
+            w in region_raw.lower() for w in ("oconee", "clarke")
+        ):
+            DEBUG["ga_regions_named_like_missing"].add(region_raw)
         county = county_from_region(row.get("region"))
         if not county:
             continue
@@ -130,6 +145,11 @@ def write_outputs(best, durations_seen):
         lines.append("")
     if missing:
         lines += [f"**Not found in Redfin data:** {', '.join(missing)}", ""]
+    lines += ["## Diagnostics", "",
+              f"- Newest period anywhere in Redfin's file: {DEBUG['latest_period_in_file'] or 'unknown'}",
+              "- GA regions with 'Oconee' or 'Clarke' in the name: "
+              + (", ".join(sorted(DEBUG["ga_regions_named_like_missing"])) or "none"),
+              ""]
     summary = "\n".join(lines)
     (OUT_DIR / "summary.md").write_text(summary)
     print(summary)
