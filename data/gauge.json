@@ -1,7 +1,7 @@
 {
   "attribution": "Realtor.com® Economic Research",
   "attribution_link": "https://www.realtor.com/research/data/",
-  "generated_at": "2026-10-12T17:01:18+00:00",
+  "generated_at": "2026-10-12T17:26:05+00:00",
   "method": "Estimated from Realtor.com pending listings, days on market and price cuts.",
   "counties": {
     "Walton": {
@@ -138,6 +138,200 @@
         "days_on_market": 40,
         "price_cuts": 50
       }
+    }
+  },
+  "cities": {
+    "Winder": {
+      "score": 45,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202609",
+      "est_months_supply": 3.7,
+      "pending_ratio": 0.3241,
+      "days_on_market": 61.0,
+      "price_cut_share": 0.2557,
+      "parts": {
+        "supply": 84,
+        "days_on_market": 11,
+        "price_cuts": 0
+      },
+      "zips": [
+        "30680"
+      ],
+      "active_listings": 309
+    },
+    "Bethlehem": {
+      "score": 47,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202609",
+      "est_months_supply": 3.2,
+      "pending_ratio": 0.3699,
+      "days_on_market": 81.0,
+      "price_cut_share": 0.2879,
+      "parts": {
+        "supply": 95,
+        "days_on_market": 0,
+        "price_cuts": 0
+      },
+      "zips": [
+        "30620"
+      ],
+      "active_listings": 87
+    },
+    "Statham": {
+      "score": 55,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202609",
+      "est_months_supply": 4.3,
+      "pending_ratio": 0.2761,
+      "days_on_market": 70.0,
+      "price_cut_share": 0.1423,
+      "parts": {
+        "supply": 70,
+        "days_on_market": 40,
+        "price_cuts": 40
+      },
+      "zips": [
+        "30666"
+      ],
+      "active_listings": 149
+    },
+    "Auburn": {
+      "score": 56,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202609",
+      "est_months_supply": 4.1,
+      "pending_ratio": 0.2923,
+      "days_on_market": 59.0,
+      "price_cut_share": 0.1677,
+      "parts": {
+        "supply": 75,
+        "days_on_market": 25,
+        "price_cuts": 50
+      },
+      "zips": [
+        "30011"
+      ],
+      "active_listings": 163
+    },
+    "Braselton": {
+      "score": 37,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202609",
+      "est_months_supply": 5.6,
+      "pending_ratio": 0.2152,
+      "days_on_market": 63.0,
+      "price_cut_share": 0.2949,
+      "parts": {
+        "supply": 43,
+        "days_on_market": 50,
+        "price_cuts": 12
+      },
+      "zips": [
+        "30517"
+      ],
+      "active_listings": 165
+    },
+    "Jefferson": {
+      "score": 40,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202609",
+      "est_months_supply": 5.1,
+      "pending_ratio": 0.2342,
+      "days_on_market": 73.0,
+      "price_cut_share": 0.1577,
+      "parts": {
+        "supply": 53,
+        "days_on_market": 0,
+        "price_cuts": 56
+      },
+      "zips": [
+        "30549"
+      ],
+      "active_listings": 293
+    },
+    "Hoschton": {
+      "score": 49,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202609",
+      "est_months_supply": 5.3,
+      "pending_ratio": 0.2251,
+      "days_on_market": 63.0,
+      "price_cut_share": 0.1717,
+      "parts": {
+        "supply": 48,
+        "days_on_market": 38,
+        "price_cuts": 62
+      },
+      "zips": [
+        "30548"
+      ],
+      "active_listings": 331
+    },
+    "Monroe": {
+      "score": 32,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202609",
+      "est_months_supply": 4.8,
+      "pending_ratio": 0.248,
+      "days_on_market": 71.0,
+      "price_cut_share": 0.3291,
+      "parts": {
+        "supply": 59,
+        "days_on_market": 10,
+        "price_cuts": 0
+      },
+      "zips": [
+        "30655",
+        "30656"
+      ],
+      "active_listings": 303
+    },
+    "Watkinsville": {
+      "score": 78,
+      "zone": "slight_seller",
+      "zone_label": "Slight Seller's Market",
+      "month_raw": "202609",
+      "est_months_supply": 2.9,
+      "pending_ratio": 0.4083,
+      "days_on_market": 71.0,
+      "price_cut_share": 0.1472,
+      "parts": {
+        "supply": 100,
+        "days_on_market": 75,
+        "price_cuts": 38
+      },
+      "zips": [
+        "30677"
+      ],
+      "active_listings": 109
+    },
+    "Athens": {
+      "score": 50,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202609",
+      "est_months_supply": 5.1,
+      "pending_ratio": 0.2367,
+      "days_on_market": 60.1,
+      "price_cut_share": 0.162,
+      "parts": {
+        "supply": 54,
+        "days_on_market": 60,
+        "price_cuts": 30
+      },
+      "zips": [
+        "30601",
+        "30606"
+      ],
+      "active_listings": 349
     }
   }
 }
