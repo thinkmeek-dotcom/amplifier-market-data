@@ -1,6 +1,6 @@
    name: Fetch market data
 
-   # Step 1: manual runs only. We add the monthly schedule after the numbers look right.
+   # Manual runs only for now. We add the monthly schedule after the website is wired up.
    on:
      workflow_dispatch:
 
@@ -12,14 +12,14 @@
        runs-on: ubuntu-latest
        timeout-minutes: 20
        steps:
-         - uses: actions/checkout@v4
+         - uses: actions/checkout@v5
 
-         - uses: actions/setup-python@v5
+         - uses: actions/setup-python@v6
            with:
              python-version: "3.12"
 
-         - name: Download and filter Redfin county data
-           run: python scripts/fetch_redfin.py
+         - name: Download and filter Realtor.com county data
+           run: python scripts/fetch_market_data.py
 
          - name: Save results to the repo
            run: |
