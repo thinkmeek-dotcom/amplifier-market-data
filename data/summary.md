@@ -1,6 +1,6 @@
 # Amplifier market snapshot
 
-Generated 2026-10-12T05:51:22+00:00 from Redfin.
+Generated 2026-10-12T05:55:58+00:00 from Redfin.
 
 ## Period length: 30
 
@@ -15,3 +15,8 @@ Generated 2026-10-12T05:51:22+00:00 from Redfin.
 | Forsyth | 2026-05-01 to 2026-05-31 | $650,000 | $642,500 | 97.8% | 38 | 316 |
 
 **Not found in Redfin data:** Oconee, Clarke
+
+## Diagnostics
+
+- Newest period anywhere in Redfin's file: 2026-05-31
+- GA regions with 'Oconee' or 'Clarke' in the name: none
