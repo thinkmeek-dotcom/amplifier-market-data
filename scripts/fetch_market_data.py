@@ -263,6 +263,7 @@ def collect_history(url, key_field, wanted, local_file=None):
                 "dom": num(row.get("median_days_on_market")),
                 "price_cut_share": num(row.get("price_reduced_share")),
                 "active": num(row.get("active_listing_count")),
+                "pending": num(row.get("pending_listing_count")),
                 "flagged": flagged,
             }
     except Exception as err:  # noqa: BLE001
@@ -321,7 +322,10 @@ def build_signal_history(counties, zips=None):
             if p["flagged"]:
                 continue
             rows.append({"month": month, "pending_ratio": p["pending_ratio"],
-                         "dom": p["dom"], "price_cut_share": p["price_cut_share"]})
+                         "dom": p["dom"], "price_cut_share": p["price_cut_share"],
+                         # Raw counts for the "How is this calculated?" note only.
+                         # Not named "active" so the small-county filter is unchanged.
+                         "count_active": p.get("active"), "count_pending": p.get("pending")})
         signals[COUNTIES[fips]] = rows
     out = {
         "attribution": ATTRIBUTION,
@@ -353,8 +357,11 @@ def city_signal_rows(zips):
             if not parts or total <= 0:
                 continue
             w = lambda k: sum(pt[k] * pt["active"] for pt in parts) / total
+            pend = [pt.get("pending") for pt in parts]
             rows.append({"month": month, "pending_ratio": w("pending_ratio"), "dom": w("dom"),
                          "price_cut_share": w("price_cut_share"), "active": total,
+                         "count_active": total,
+                         "count_pending": None if None in pend else sum(pend),
                          "zips": [z for z in zip_list if zips.get(z, {}).get(month) in parts]})
         cities[city] = rows
     return cities
@@ -419,6 +426,19 @@ def score_rows(rows):
     if "zips" in cur:
         out["zips"] = cur["zips"]
         out["active_listings"] = round(cur["active"])
+    # Inputs for the website's "How is this calculated?" note. Only published
+    # when the simple equation (homes for sale / monthly contracts) lands on the
+    # same months-of-supply figure, so the site never shows math that disagrees.
+    act, pend = cur.get("count_active"), cur.get("count_pending")
+    if act and pend and act > 0 and pend > 0:
+        monthly = round(pend / MOS_FACTOR)
+        if monthly > 0 and abs(round(act / monthly, 1) - out["est_months_supply"]) <= 0.1:
+            out["supply_math"] = {
+                "active_listings": round(act),
+                "pending_listings": round(pend),
+                "est_monthly_contracts": monthly,
+                "assumed_pending_months": MOS_FACTOR,
+            }
     return out
 
 
