@@ -1,7 +1,7 @@
 {
   "attribution": "Realtor.com® Economic Research",
   "attribution_link": "https://www.realtor.com/research/data/",
-  "generated_at": "2026-10-12T17:26:05+00:00",
+  "generated_at": "2026-10-15T01:20:17+00:00",
   "method": "Estimated from Realtor.com pending listings, days on market and price cuts.",
   "counties": {
     "Walton": {
@@ -17,6 +17,12 @@
         "supply": 68,
         "days_on_market": 15,
         "price_cuts": 10
+      },
+      "supply_math": {
+        "active_listings": 637,
+        "pending_listings": 173,
+        "est_monthly_contracts": 144,
+        "assumed_pending_months": 1.2
       }
     },
     "Gwinnett": {
@@ -32,6 +38,12 @@
         "supply": 61,
         "days_on_market": 11,
         "price_cuts": 11
+      },
+      "supply_math": {
+        "active_listings": 3833,
+        "pending_listings": 969,
+        "est_monthly_contracts": 808,
+        "assumed_pending_months": 1.2
       }
     },
     "Jackson": {
@@ -47,6 +59,12 @@
         "supply": 58,
         "days_on_market": 0,
         "price_cuts": 33
+      },
+      "supply_math": {
+        "active_listings": 809,
+        "pending_listings": 199,
+        "est_monthly_contracts": 166,
+        "assumed_pending_months": 1.2
       }
     },
     "Barrow": {
@@ -62,6 +80,12 @@
         "supply": 85,
         "days_on_market": 0,
         "price_cuts": 11
+      },
+      "supply_math": {
+        "active_listings": 635,
+        "pending_listings": 207,
+        "est_monthly_contracts": 172,
+        "assumed_pending_months": 1.2
       }
     },
     "Morgan": {
@@ -77,6 +101,12 @@
         "supply": 57,
         "days_on_market": 50,
         "price_cuts": 0
+      },
+      "supply_math": {
+        "active_listings": 128,
+        "pending_listings": 31,
+        "est_monthly_contracts": 26,
+        "assumed_pending_months": 1.2
       }
     },
     "Clarke": {
@@ -92,6 +122,12 @@
         "supply": 56,
         "days_on_market": 30,
         "price_cuts": 20
+      },
+      "supply_math": {
+        "active_listings": 590,
+        "pending_listings": 143,
+        "est_monthly_contracts": 119,
+        "assumed_pending_months": 1.2
       }
     },
     "Hall": {
@@ -107,6 +143,12 @@
         "supply": 58,
         "days_on_market": 33,
         "price_cuts": 22
+      },
+      "supply_math": {
+        "active_listings": 1176,
+        "pending_listings": 290,
+        "est_monthly_contracts": 242,
+        "assumed_pending_months": 1.2
       }
     },
     "Forsyth": {
@@ -122,6 +164,12 @@
         "supply": 53,
         "days_on_market": 28,
         "price_cuts": 22
+      },
+      "supply_math": {
+        "active_listings": 1342,
+        "pending_listings": 316,
+        "est_monthly_contracts": 263,
+        "assumed_pending_months": 1.2
       }
     },
     "Oconee": {
@@ -137,6 +185,12 @@
         "supply": 88,
         "days_on_market": 40,
         "price_cuts": 50
+      },
+      "supply_math": {
+        "active_listings": 249,
+        "pending_listings": 84,
+        "est_monthly_contracts": 70,
+        "assumed_pending_months": 1.2
       }
     }
   },
@@ -158,7 +212,13 @@
       "zips": [
         "30680"
       ],
-      "active_listings": 309
+      "active_listings": 309,
+      "supply_math": {
+        "active_listings": 309,
+        "pending_listings": 100,
+        "est_monthly_contracts": 83,
+        "assumed_pending_months": 1.2
+      }
     },
     "Bethlehem": {
       "score": 47,
@@ -177,7 +237,13 @@
       "zips": [
         "30620"
       ],
-      "active_listings": 87
+      "active_listings": 87,
+      "supply_math": {
+        "active_listings": 87,
+        "pending_listings": 32,
+        "est_monthly_contracts": 27,
+        "assumed_pending_months": 1.2
+      }
     },
     "Statham": {
       "score": 55,
@@ -215,7 +281,13 @@
       "zips": [
         "30011"
       ],
-      "active_listings": 163
+      "active_listings": 163,
+      "supply_math": {
+        "active_listings": 163,
+        "pending_listings": 48,
+        "est_monthly_contracts": 40,
+        "assumed_pending_months": 1.2
+      }
     },
     "Braselton": {
       "score": 37,
@@ -234,7 +306,13 @@
       "zips": [
         "30517"
       ],
-      "active_listings": 165
+      "active_listings": 165,
+      "supply_math": {
+        "active_listings": 165,
+        "pending_listings": 36,
+        "est_monthly_contracts": 30,
+        "assumed_pending_months": 1.2
+      }
     },
     "Jefferson": {
       "score": 40,
@@ -253,7 +331,13 @@
       "zips": [
         "30549"
       ],
-      "active_listings": 293
+      "active_listings": 293,
+      "supply_math": {
+        "active_listings": 293,
+        "pending_listings": 69,
+        "est_monthly_contracts": 58,
+        "assumed_pending_months": 1.2
+      }
     },
     "Hoschton": {
       "score": 49,
@@ -272,7 +356,13 @@
       "zips": [
         "30548"
       ],
-      "active_listings": 331
+      "active_listings": 331,
+      "supply_math": {
+        "active_listings": 331,
+        "pending_listings": 75,
+        "est_monthly_contracts": 62,
+        "assumed_pending_months": 1.2
+      }
     },
     "Monroe": {
       "score": 32,
@@ -311,7 +401,13 @@
       "zips": [
         "30677"
       ],
-      "active_listings": 109
+      "active_listings": 109,
+      "supply_math": {
+        "active_listings": 109,
+        "pending_listings": 45,
+        "est_monthly_contracts": 38,
+        "assumed_pending_months": 1.2
+      }
     },
     "Athens": {
       "score": 50,
@@ -331,7 +427,13 @@
         "30601",
         "30606"
       ],
-      "active_listings": 349
+      "active_listings": 349,
+      "supply_math": {
+        "active_listings": 349,
+        "pending_listings": 83,
+        "est_monthly_contracts": 69,
+        "assumed_pending_months": 1.2
+      }
     }
   }
 }
