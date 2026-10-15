@@ -3,8 +3,11 @@ name: Fetch market data
 on:
   # Autopilot: checks every Monday at ~8am Eastern.
   # Only saves a change when Realtor.com publishes a new month.
+  # Fridays at ~10am Eastern: mortgage rates only (Freddie Mac publishes Thursdays at noon ET).
+  # Monday's run also re-checks rates, as a backup if Freddie Mac posts late.
   schedule:
     - cron: "0 12 * * 1"
+    - cron: "0 14 * * 5"
   # Manual "Run workflow" button still works anytime.
   workflow_dispatch:
 
@@ -23,7 +26,15 @@ jobs:
           python-version: "3.12"
 
       - name: Download and filter Realtor.com data
+        if: github.event.schedule != '0 14 * * 5'
         run: python scripts/fetch_market_data.py
+
+      # Separate from the Realtor.com step: if Freddie Mac is down or the data
+      # fails validation, this step is flagged but the last good file is kept
+      # and the rest of the workflow carries on.
+      - name: Download Freddie Mac mortgage rates
+        continue-on-error: true
+        run: python scripts/fetch_mortgage_rates.py
 
       - name: Save results to the repo
         run: |
