@@ -1,213 +1,213 @@
 {
   "attribution": "Realtor.com® Economic Research",
   "attribution_link": "https://www.realtor.com/research/data/",
-  "generated_at": "2026-11-02T12:49:08+00:00",
+  "generated_at": "2026-11-09T12:54:21+00:00",
   "method": "Estimated from Realtor.com pending listings, days on market and price cuts.",
   "counties": {
-    "Walton": {
-      "score": 40,
+    "Jackson": {
+      "score": 33,
       "zone": "slight_buyer",
       "zone_label": "Slight Buyer's Market",
-      "month_raw": "202609",
-      "est_months_supply": 4.4,
-      "pending_ratio": 0.271,
-      "days_on_market": 65.0,
-      "price_cut_share": 0.2703,
+      "month_raw": "202610",
+      "est_months_supply": 5.2,
+      "pending_ratio": 0.2291,
+      "days_on_market": 72.0,
+      "price_cut_share": 0.21,
       "parts": {
-        "supply": 68,
-        "days_on_market": 15,
-        "price_cuts": 10
+        "supply": 50,
+        "days_on_market": 11,
+        "price_cuts": 22
       },
       "supply_math": {
-        "active_listings": 637,
-        "pending_listings": 173,
-        "est_monthly_contracts": 144,
+        "active_listings": 803,
+        "pending_listings": 184,
+        "est_monthly_contracts": 153,
         "assumed_pending_months": 1.2
       }
     },
     "Gwinnett": {
-      "score": 36,
+      "score": 29,
       "zone": "slight_buyer",
       "zone_label": "Slight Buyer's Market",
-      "month_raw": "202609",
-      "est_months_supply": 4.7,
-      "pending_ratio": 0.2527,
-      "days_on_market": 57.0,
-      "price_cut_share": 0.2705,
+      "month_raw": "202610",
+      "est_months_supply": 5.4,
+      "pending_ratio": 0.2229,
+      "days_on_market": 59.0,
+      "price_cut_share": 0.2778,
       "parts": {
-        "supply": 61,
+        "supply": 47,
         "days_on_market": 11,
         "price_cuts": 11
       },
       "supply_math": {
-        "active_listings": 3833,
-        "pending_listings": 969,
-        "est_monthly_contracts": 808,
-        "assumed_pending_months": 1.2
-      }
-    },
-    "Jackson": {
-      "score": 37,
-      "zone": "slight_buyer",
-      "zone_label": "Slight Buyer's Market",
-      "month_raw": "202609",
-      "est_months_supply": 4.9,
-      "pending_ratio": 0.2454,
-      "days_on_market": 72.0,
-      "price_cut_share": 0.197,
-      "parts": {
-        "supply": 58,
-        "days_on_market": 0,
-        "price_cuts": 33
-      },
-      "supply_math": {
-        "active_listings": 809,
-        "pending_listings": 199,
-        "est_monthly_contracts": 166,
-        "assumed_pending_months": 1.2
-      }
-    },
-    "Barrow": {
-      "score": 45,
-      "zone": "balanced",
-      "zone_label": "Balanced Market",
-      "month_raw": "202609",
-      "est_months_supply": 3.7,
-      "pending_ratio": 0.3252,
-      "days_on_market": 65.0,
-      "price_cut_share": 0.2106,
-      "parts": {
-        "supply": 85,
-        "days_on_market": 0,
-        "price_cuts": 11
-      },
-      "supply_math": {
-        "active_listings": 635,
-        "pending_listings": 207,
-        "est_monthly_contracts": 172,
+        "active_listings": 3809,
+        "pending_listings": 849,
+        "est_monthly_contracts": 708,
         "assumed_pending_months": 1.2
       }
     },
     "Morgan": {
-      "score": 41,
-      "zone": "balanced",
-      "zone_label": "Balanced Market",
-      "month_raw": "202609",
-      "est_months_supply": 5.0,
-      "pending_ratio": 0.2422,
-      "days_on_market": 82.0,
-      "price_cut_share": 0.2318,
+      "score": 27,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202610",
+      "est_months_supply": 6.2,
+      "pending_ratio": 0.1944,
+      "days_on_market": 86.0,
+      "price_cut_share": 0.2474,
       "parts": {
-        "supply": 57,
+        "supply": 29,
         "days_on_market": 50,
         "price_cuts": 0
       },
       "supply_math": {
-        "active_listings": 128,
-        "pending_listings": 31,
-        "est_monthly_contracts": 26,
-        "assumed_pending_months": 1.2
-      }
-    },
-    "Clarke": {
-      "score": 41,
-      "zone": "balanced",
-      "zone_label": "Balanced Market",
-      "month_raw": "202609",
-      "est_months_supply": 5.0,
-      "pending_ratio": 0.2417,
-      "days_on_market": 64.0,
-      "price_cut_share": 0.1819,
-      "parts": {
-        "supply": 56,
-        "days_on_market": 30,
-        "price_cuts": 20
-      },
-      "supply_math": {
-        "active_listings": 590,
-        "pending_listings": 143,
-        "est_monthly_contracts": 119,
-        "assumed_pending_months": 1.2
-      }
-    },
-    "Hall": {
-      "score": 43,
-      "zone": "balanced",
-      "zone_label": "Balanced Market",
-      "month_raw": "202609",
-      "est_months_supply": 4.9,
-      "pending_ratio": 0.2463,
-      "days_on_market": 63.0,
-      "price_cut_share": 0.2361,
-      "parts": {
-        "supply": 58,
-        "days_on_market": 33,
-        "price_cuts": 22
-      },
-      "supply_math": {
-        "active_listings": 1176,
-        "pending_listings": 290,
-        "est_monthly_contracts": 242,
-        "assumed_pending_months": 1.2
-      }
-    },
-    "Forsyth": {
-      "score": 39,
-      "zone": "slight_buyer",
-      "zone_label": "Slight Buyer's Market",
-      "month_raw": "202609",
-      "est_months_supply": 5.1,
-      "pending_ratio": 0.2356,
-      "days_on_market": 58.0,
-      "price_cut_share": 0.2815,
-      "parts": {
-        "supply": 53,
-        "days_on_market": 28,
-        "price_cuts": 22
-      },
-      "supply_math": {
-        "active_listings": 1342,
-        "pending_listings": 316,
-        "est_monthly_contracts": 263,
+        "active_listings": 144,
+        "pending_listings": 28,
+        "est_monthly_contracts": 23,
         "assumed_pending_months": 1.2
       }
     },
     "Oconee": {
-      "score": 66,
+      "score": 68,
       "zone": "slight_seller",
       "zone_label": "Slight Seller's Market",
-      "month_raw": "202609",
-      "est_months_supply": 3.6,
-      "pending_ratio": 0.338,
-      "days_on_market": 80.0,
-      "price_cut_share": 0.1357,
+      "month_raw": "202610",
+      "est_months_supply": 4.2,
+      "pending_ratio": 0.2885,
+      "days_on_market": 79.0,
+      "price_cut_share": 0.0984,
       "parts": {
-        "supply": 88,
+        "supply": 74,
+        "days_on_market": 56,
+        "price_cuts": 67
+      },
+      "supply_math": {
+        "active_listings": 260,
+        "pending_listings": 75,
+        "est_monthly_contracts": 62,
+        "assumed_pending_months": 1.2
+      }
+    },
+    "Hall": {
+      "score": 30,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202610",
+      "est_months_supply": 6.3,
+      "pending_ratio": 0.1898,
+      "days_on_market": 66.0,
+      "price_cut_share": 0.2402,
+      "parts": {
+        "supply": 26,
+        "days_on_market": 33,
+        "price_cuts": 33
+      },
+      "supply_math": {
+        "active_listings": 1175,
+        "pending_listings": 223,
+        "est_monthly_contracts": 186,
+        "assumed_pending_months": 1.2
+      }
+    },
+    "Forsyth": {
+      "score": 38,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202610",
+      "est_months_supply": 5.8,
+      "pending_ratio": 0.2061,
+      "days_on_market": 58.0,
+      "price_cut_share": 0.2904,
+      "parts": {
+        "supply": 37,
+        "days_on_market": 56,
+        "price_cuts": 22
+      },
+      "supply_math": {
+        "active_listings": 1305,
+        "pending_listings": 269,
+        "est_monthly_contracts": 224,
+        "assumed_pending_months": 1.2
+      }
+    },
+    "Clarke": {
+      "score": 33,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202610",
+      "est_months_supply": 5.7,
+      "pending_ratio": 0.212,
+      "days_on_market": 67.0,
+      "price_cut_share": 0.1871,
+      "parts": {
+        "supply": 41,
         "days_on_market": 40,
+        "price_cuts": 10
+      },
+      "supply_math": {
+        "active_listings": 618,
+        "pending_listings": 131,
+        "est_monthly_contracts": 109,
+        "assumed_pending_months": 1.2
+      }
+    },
+    "Walton": {
+      "score": 46,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202610",
+      "est_months_supply": 5.0,
+      "pending_ratio": 0.2419,
+      "days_on_market": 64.0,
+      "price_cut_share": 0.2319,
+      "parts": {
+        "supply": 56,
+        "days_on_market": 20,
         "price_cuts": 50
       },
       "supply_math": {
-        "active_listings": 249,
-        "pending_listings": 84,
-        "est_monthly_contracts": 70,
+        "active_listings": 645,
+        "pending_listings": 156,
+        "est_monthly_contracts": 130,
+        "assumed_pending_months": 1.2
+      }
+    },
+    "Barrow": {
+      "score": 43,
+      "zone": "balanced",
+      "zone_label": "Balanced Market",
+      "month_raw": "202610",
+      "est_months_supply": 4.4,
+      "pending_ratio": 0.275,
+      "days_on_market": 65.0,
+      "price_cut_share": 0.208,
+      "parts": {
+        "supply": 70,
+        "days_on_market": 11,
+        "price_cuts": 22
+      },
+      "supply_math": {
+        "active_listings": 629,
+        "pending_listings": 173,
+        "est_monthly_contracts": 144,
         "assumed_pending_months": 1.2
       }
     }
   },
   "cities": {
     "Winder": {
-      "score": 45,
+      "score": 49,
       "zone": "balanced",
       "zone_label": "Balanced Market",
-      "month_raw": "202609",
-      "est_months_supply": 3.7,
-      "pending_ratio": 0.3241,
-      "days_on_market": 61.0,
-      "price_cut_share": 0.2557,
+      "month_raw": "202610",
+      "est_months_supply": 4.2,
+      "pending_ratio": 0.2848,
+      "days_on_market": 65.0,
+      "price_cut_share": 0.2132,
       "parts": {
-        "supply": 84,
-        "days_on_market": 11,
-        "price_cuts": 0
+        "supply": 73,
+        "days_on_market": 12,
+        "price_cuts": 38
       },
       "zips": [
         "30680"
@@ -215,225 +215,226 @@
       "active_listings": 309,
       "supply_math": {
         "active_listings": 309,
-        "pending_listings": 100,
-        "est_monthly_contracts": 83,
+        "pending_listings": 88,
+        "est_monthly_contracts": 73,
         "assumed_pending_months": 1.2
       }
     },
     "Bethlehem": {
-      "score": 47,
+      "score": 50,
       "zone": "balanced",
       "zone_label": "Balanced Market",
-      "month_raw": "202609",
-      "est_months_supply": 3.2,
-      "pending_ratio": 0.3699,
-      "days_on_market": 81.0,
-      "price_cut_share": 0.2879,
+      "month_raw": "202610",
+      "est_months_supply": 3.8,
+      "pending_ratio": 0.314,
+      "days_on_market": 71.0,
+      "price_cut_share": 0.2074,
       "parts": {
-        "supply": 95,
+        "supply": 82,
         "days_on_market": 0,
-        "price_cuts": 0
+        "price_cuts": 38
       },
       "zips": [
         "30620"
       ],
-      "active_listings": 87,
-      "supply_math": {
-        "active_listings": 87,
-        "pending_listings": 32,
-        "est_monthly_contracts": 27,
-        "assumed_pending_months": 1.2
-      }
+      "active_listings": 86
     },
     "Statham": {
-      "score": 55,
+      "score": 41,
       "zone": "balanced",
       "zone_label": "Balanced Market",
-      "month_raw": "202609",
-      "est_months_supply": 4.3,
-      "pending_ratio": 0.2761,
-      "days_on_market": 70.0,
-      "price_cut_share": 0.1423,
+      "month_raw": "202610",
+      "est_months_supply": 4.9,
+      "pending_ratio": 0.2448,
+      "days_on_market": 67.0,
+      "price_cut_share": 0.1569,
       "parts": {
-        "supply": 70,
-        "days_on_market": 40,
-        "price_cuts": 40
+        "supply": 58,
+        "days_on_market": 50,
+        "price_cuts": 0
       },
       "zips": [
         "30666"
       ],
-      "active_listings": 149
+      "active_listings": 143,
+      "supply_math": {
+        "active_listings": 143,
+        "pending_listings": 35,
+        "est_monthly_contracts": 29,
+        "assumed_pending_months": 1.2
+      }
     },
     "Auburn": {
-      "score": 56,
-      "zone": "balanced",
-      "zone_label": "Balanced Market",
-      "month_raw": "202609",
-      "est_months_supply": 4.1,
-      "pending_ratio": 0.2923,
-      "days_on_market": 59.0,
-      "price_cut_share": 0.1677,
+      "score": 34,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202610",
+      "est_months_supply": 6.2,
+      "pending_ratio": 0.1938,
+      "days_on_market": 58.0,
+      "price_cut_share": 0.1973,
       "parts": {
-        "supply": 75,
-        "days_on_market": 25,
-        "price_cuts": 50
+        "supply": 29,
+        "days_on_market": 33,
+        "price_cuts": 44
       },
       "zips": [
         "30011"
       ],
-      "active_listings": 163,
+      "active_listings": 160,
       "supply_math": {
-        "active_listings": 163,
-        "pending_listings": 48,
-        "est_monthly_contracts": 40,
+        "active_listings": 160,
+        "pending_listings": 31,
+        "est_monthly_contracts": 26,
         "assumed_pending_months": 1.2
       }
     },
     "Braselton": {
-      "score": 37,
+      "score": 31,
       "zone": "slight_buyer",
       "zone_label": "Slight Buyer's Market",
-      "month_raw": "202609",
-      "est_months_supply": 5.6,
-      "pending_ratio": 0.2152,
-      "days_on_market": 63.0,
-      "price_cut_share": 0.2949,
+      "month_raw": "202610",
+      "est_months_supply": 6.2,
+      "pending_ratio": 0.1948,
+      "days_on_market": 67.0,
+      "price_cut_share": 0.3258,
       "parts": {
-        "supply": 43,
-        "days_on_market": 50,
-        "price_cuts": 12
+        "supply": 30,
+        "days_on_market": 64,
+        "price_cuts": 0
       },
       "zips": [
         "30517"
       ],
-      "active_listings": 165,
+      "active_listings": 154,
       "supply_math": {
-        "active_listings": 165,
-        "pending_listings": 36,
-        "est_monthly_contracts": 30,
+        "active_listings": 154,
+        "pending_listings": 30,
+        "est_monthly_contracts": 25,
         "assumed_pending_months": 1.2
       }
     },
     "Jefferson": {
-      "score": 40,
+      "score": 25,
       "zone": "slight_buyer",
       "zone_label": "Slight Buyer's Market",
-      "month_raw": "202609",
-      "est_months_supply": 5.1,
-      "pending_ratio": 0.2342,
-      "days_on_market": 73.0,
-      "price_cut_share": 0.1577,
+      "month_raw": "202610",
+      "est_months_supply": 5.8,
+      "pending_ratio": 0.2083,
+      "days_on_market": 74.0,
+      "price_cut_share": 0.2079,
       "parts": {
-        "supply": 53,
+        "supply": 39,
         "days_on_market": 0,
-        "price_cuts": 56
+        "price_cuts": 22
       },
       "zips": [
         "30549"
       ],
-      "active_listings": 293,
+      "active_listings": 288,
       "supply_math": {
-        "active_listings": 293,
-        "pending_listings": 69,
-        "est_monthly_contracts": 58,
+        "active_listings": 288,
+        "pending_listings": 60,
+        "est_monthly_contracts": 50,
         "assumed_pending_months": 1.2
       }
     },
     "Hoschton": {
-      "score": 49,
+      "score": 44,
       "zone": "balanced",
       "zone_label": "Balanced Market",
-      "month_raw": "202609",
-      "est_months_supply": 5.3,
-      "pending_ratio": 0.2251,
-      "days_on_market": 63.0,
-      "price_cut_share": 0.1717,
+      "month_raw": "202610",
+      "est_months_supply": 5.6,
+      "pending_ratio": 0.2162,
+      "days_on_market": 61.0,
+      "price_cut_share": 0.2315,
       "parts": {
-        "supply": 48,
-        "days_on_market": 38,
-        "price_cuts": 62
+        "supply": 43,
+        "days_on_market": 62,
+        "price_cuts": 25
       },
       "zips": [
         "30548"
       ],
-      "active_listings": 331,
+      "active_listings": 333,
       "supply_math": {
-        "active_listings": 331,
-        "pending_listings": 75,
-        "est_monthly_contracts": 62,
+        "active_listings": 333,
+        "pending_listings": 72,
+        "est_monthly_contracts": 60,
         "assumed_pending_months": 1.2
       }
     },
     "Monroe": {
-      "score": 32,
+      "score": 38,
       "zone": "slight_buyer",
       "zone_label": "Slight Buyer's Market",
-      "month_raw": "202609",
-      "est_months_supply": 4.8,
-      "pending_ratio": 0.248,
-      "days_on_market": 71.0,
-      "price_cut_share": 0.3291,
+      "month_raw": "202610",
+      "est_months_supply": 5.7,
+      "pending_ratio": 0.2111,
+      "days_on_market": 63.6,
+      "price_cut_share": 0.2101,
       "parts": {
-        "supply": 59,
-        "days_on_market": 10,
-        "price_cuts": 0
+        "supply": 40,
+        "days_on_market": 20,
+        "price_cuts": 50
       },
       "zips": [
         "30655",
         "30656"
       ],
-      "active_listings": 303
+      "active_listings": 308,
+      "supply_math": {
+        "active_listings": 308,
+        "pending_listings": 65,
+        "est_monthly_contracts": 54,
+        "assumed_pending_months": 1.2
+      }
     },
     "Watkinsville": {
-      "score": 78,
-      "zone": "slight_seller",
-      "zone_label": "Slight Seller's Market",
-      "month_raw": "202609",
+      "score": 86,
+      "zone": "strong_seller",
+      "zone_label": "Strong Seller's Market",
+      "month_raw": "202610",
       "est_months_supply": 2.9,
-      "pending_ratio": 0.4083,
-      "days_on_market": 71.0,
-      "price_cut_share": 0.1472,
+      "pending_ratio": 0.4182,
+      "days_on_market": 74.0,
+      "price_cut_share": 0.1074,
       "parts": {
         "supply": 100,
-        "days_on_market": 75,
-        "price_cuts": 38
+        "days_on_market": 67,
+        "price_cuts": 78
       },
       "zips": [
         "30677"
       ],
-      "active_listings": 109,
+      "active_listings": 110,
       "supply_math": {
-        "active_listings": 109,
-        "pending_listings": 45,
+        "active_listings": 110,
+        "pending_listings": 46,
         "est_monthly_contracts": 38,
         "assumed_pending_months": 1.2
       }
     },
     "Athens": {
-      "score": 50,
-      "zone": "balanced",
-      "zone_label": "Balanced Market",
-      "month_raw": "202609",
-      "est_months_supply": 5.1,
-      "pending_ratio": 0.2367,
-      "days_on_market": 60.1,
-      "price_cut_share": 0.162,
+      "score": 33,
+      "zone": "slight_buyer",
+      "zone_label": "Slight Buyer's Market",
+      "month_raw": "202610",
+      "est_months_supply": 5.9,
+      "pending_ratio": 0.2045,
+      "days_on_market": 67.4,
+      "price_cut_share": 0.1832,
       "parts": {
-        "supply": 54,
-        "days_on_market": 60,
-        "price_cuts": 30
+        "supply": 36,
+        "days_on_market": 40,
+        "price_cuts": 20
       },
       "zips": [
         "30601",
+        "30605",
         "30606"
       ],
-      "active_listings": 349,
-      "supply_math": {
-        "active_listings": 349,
-        "pending_listings": 83,
-        "est_monthly_contracts": 69,
-        "assumed_pending_months": 1.2
-      }
+      "active_listings": 572
     }
   }
 }

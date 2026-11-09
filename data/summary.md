@@ -1,39 +1,39 @@
 # Amplifier market snapshot
 
-**September 2026** · Source: [Realtor.com® Economic Research](https://www.realtor.com/research/data/) · fetched via download · generated 2026-11-02T12:48:48+00:00
+**October 2026** · Source: [Realtor.com® Economic Research](https://www.realtor.com/research/data/) · fetched via download · generated 2026-11-09T12:53:49+00:00
 
 | County | Median list price | Days on market | Active listings | % with a price cut | Pending ratio | Data month |
 |---|---|---|---|---|---|---|
-| Barrow | $389,900 | 65 | 635 | 21% | 0.33 | September 2026 |
-| Jackson | $461,485 | 72 | 809 | 20% | 0.25 | September 2026 |
-| Gwinnett | $449,945 | 57 | 3,833 | 27% | 0.25 | September 2026 |
-| Hall | $489,900 | 63 | 1,176 | 24% | 0.25 | September 2026 |
-| Oconee | $698,364 | 80 | 249 | 14% | 0.34 | September 2026 |
-| Clarke | $386,250 | 64 | 590 | 18% | 0.24 | September 2026 |
-| Walton | $479,975 | 65 | 637 | 27% | 0.27 | September 2026 |
-| Morgan | $585,000 | 82 | 128 | 23% | 0.24 | September 2026 |
-| Forsyth | $665,950 | 58 | 1,342 | 28% | 0.24 | September 2026 |
+| Barrow | $389,900 | 65 | 629 | 21% | 0.28 | October 2026 |
+| Jackson | $468,500 | 72 | 803 | 21% | 0.23 | October 2026 |
+| Gwinnett | $444,495 | 59 | 3,809 | 28% | 0.22 | October 2026 |
+| Hall | $485,000 | 66 | 1,175 | 24% | 0.19 | October 2026 |
+| Oconee | $702,500 | 79 | 260 | 10% | 0.29 | October 2026 |
+| Clarke | $375,000 | 67 | 618 | 19% | 0.21 | October 2026 |
+| Walton | $475,000 | 64 | 645 | 23% | 0.24 | October 2026 |
+| Morgan | $566,950 | 86 | 144 | 25% | 0.19 | October 2026 |
+| Forsyth | $659,945 | 58 | 1,305 | 29% | 0.21 | October 2026 |
 
 ⚠️ = Realtor.com flagged this county's data for a quality issue that month.
 
 
 ## Cities by ZIP
 
-**September 2026** · fetched via download
+**October 2026** · fetched via download
 
 | City | ZIP | Median list price | Days on market | Active listings | % with a price cut |
 |---|---|---|---|---|---|
-| Winder | 30680 | $369,900 | 61 | 309 | 26% |
-| Bethlehem | 30620 | $385,000 | 81 | 87 | 29% |
-| Statham | 30666 | $479,500 | 70 | 149 | 14% |
-| Auburn | 30011 | $432,200 | 59 | 163 | 17% |
-| Braselton | 30517 | $465,950 | 63 | 165 | 29% |
-| Jefferson | 30549 | $487,940 | 73 | 293 | 16% |
-| Hoschton | 30548 | $549,475 | 63 | 331 | 17% |
-| Monroe | 30655 | $387,225 | 74 | 172 | 28% |
-| Monroe | 30656 | $573,750 | 67 | 131 | 39% |
-| Watkinsville | 30677 | $632,050 | 71 | 109 | 15% |
-| Athens | 30601 | $391,688 | 47 | 95 | 15% |
-| Athens | 30605 ⚠️ | $334,750 | 69 | 190 | 17% |
-| Athens | 30606 | $464,000 | 65 | 254 | 17% |
-| Athens | 30607 ⚠️ | $488,425 | 78 | 50 | 21% |
+| Winder | 30680 | $372,000 | 65 | 309 | 21% |
+| Bethlehem | 30620 | $385,000 | 71 | 86 | 21% |
+| Statham | 30666 | $529,950 | 67 | 143 | 16% |
+| Auburn | 30011 | $429,900 | 58 | 160 | 20% |
+| Braselton | 30517 | $457,450 | 67 | 154 | 33% |
+| Jefferson | 30549 | $498,500 | 74 | 288 | 21% |
+| Hoschton | 30548 | $549,900 | 61 | 333 | 23% |
+| Monroe | 30655 | $386,950 | 59 | 180 | 19% |
+| Monroe | 30656 | $555,000 | 70 | 128 | 24% |
+| Watkinsville | 30677 | $684,000 | 74 | 110 | 11% |
+| Athens | 30601 | $402,000 | 68 | 94 | 16% |
+| Athens | 30605 | $329,900 | 60 | 212 | 16% |
+| Athens | 30606 | $439,900 | 73 | 266 | 20% |
+| Athens | 30607 ⚠️ | $485,000 | 77 | 50 | 12% |
