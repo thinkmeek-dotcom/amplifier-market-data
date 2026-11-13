@@ -4,29 +4,25 @@
  "attribution": "Freddie Mac Primary Mortgage Market Survey\u00ae",
  "attribution_link": "https://www.freddiemac.com/pmms",
  "source_file": "https://www.freddiemac.com/pmms/docs/PMMS_history.csv",
- "generated_at": "2026-11-06T14:50:03+00:00",
+ "generated_at": "2026-11-13T14:48:04+00:00",
  "latest": {
-  "date": "2026-11-05",
-  "rate": 7.18
+  "date": "2026-11-12",
+  "rate": 7.11
  },
  "high": {
-  "date": "2023-11-09",
-  "rate": 7.5
+  "date": "2023-11-16",
+  "rate": 7.44
  },
  "low": {
   "date": "2026-02-26",
   "rate": 5.98
  },
  "year_ago": {
-  "date": "2025-11-06",
-  "rate": 6.22
+  "date": "2025-11-13",
+  "rate": 6.24
  },
- "change_vs_year_ago": 0.96,
+ "change_vs_year_ago": 0.87,
  "observations": [
-  {
-   "date": "2023-11-09",
-   "rate": 7.5
-  },
   {
    "date": "2023-11-16",
    "rate": 7.44
@@ -650,6 +646,10 @@
   {
    "date": "2026-11-05",
    "rate": 7.18
+  },
+  {
+   "date": "2026-11-12",
+   "rate": 7.11
   }
  ]
 }
